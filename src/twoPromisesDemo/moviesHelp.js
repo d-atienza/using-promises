@@ -25,7 +25,7 @@ function queryDBForMatchingMovies(pool, searchTerm) {
     ]);
 }
 /**Prompt user for searchTerm for movie search.
- * @returns {Promise<{searchTerm: string}>}
+ * @returns {Promise<{searchTerm: string}>} //promise resolving to an object with one key value pair
  */
 function promptForSearchTerm() {
     return prompt({

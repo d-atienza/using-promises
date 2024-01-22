@@ -7,8 +7,11 @@ const promiseOfInput = prompt({
     limit: 10,
     choices: ["Apple", "Blackberry", "Watermelon"],
 });
-promiseOfInput.then(handleResult);
 
-function handleResult(answer) {
-    console.log("Ok Making ice-cream with:", answer.flavor);
-}
+promiseOfInput.then((response) => {
+console.log("Ok Making ice-cream with:", response.flavor);
+});
+
+// function handleResult(answer) {
+//     console.log("Ok Making ice-cream with:", answer.flavor);
+// }

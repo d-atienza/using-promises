@@ -6,11 +6,12 @@ const promiseOfDBResult = pool.query("select * from hiscores");
 
 console.log("DB query has started!");
 
-promiseOfDBResult.then(handleCompletedPromise);
-
-console.log("Result-handler has been registered!");
-
-function handleCompletedPromise(result) {
+promiseOfDBResult.then((result) => {
     console.log("DB query has finished!  Results: ");
     console.log("Here are the query rows: ", result.rows);
-}
+
+    console.log(result.rows.keys);
+});
+
+
+console.log("Result-handler has been registered!");
